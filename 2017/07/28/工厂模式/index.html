@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Hathaway`s Blog</title>
+  <title>工厂模式 | Hathaway`s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hathaway`s Blog">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="1234567891011121314151617181920212223242526function HairFactory()&amp;#123;&amp;#125;;HairFactory.prototype=&amp;#123;	constructor:HairFactory,	getHair:function(type)&amp;#123;		if(type==&amp;apos;left&amp;apos;)&amp;#123;			ret">
+<meta name="keywords" content="javascript,设计模式">
+<meta property="og:type" content="article">
+<meta property="og:title" content="工厂模式">
+<meta property="og:url" content="http://yoursite.com/2017/07/28/工厂模式/index.html">
 <meta property="og:site_name" content="Hathaway`s Blog">
+<meta property="og:description" content="1234567891011121314151617181920212223242526function HairFactory()&amp;#123;&amp;#125;;HairFactory.prototype=&amp;#123;	constructor:HairFactory,	getHair:function(type)&amp;#123;		if(type==&amp;apos;left&amp;apos;)&amp;#123;			ret">
+<meta property="og:updated_time" content="2017-08-02T08:05:37.085Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hathaway`s Blog">
+<meta name="twitter:title" content="工厂模式">
+<meta name="twitter:description" content="1234567891011121314151617181920212223242526function HairFactory()&amp;#123;&amp;#125;;HairFactory.prototype=&amp;#123;	constructor:HairFactory,	getHair:function(type)&amp;#123;		if(type==&amp;apos;left&amp;apos;)&amp;#123;			ret">
   
     <link rel="alternative" href="/atom.xml" title="Hathaway`s Blog" type="application/atom+xml">
   
@@ -131,36 +136,36 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-工厂模式" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      工厂模式
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/28/工厂模式/" class="archive-article-date">
+
+        
+        <a href="/2017/07/28/工厂模式/" class="archive-article-date">
   	<time datetime="2017-07-28T01:46:21.011Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-28</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/28/工厂模式/">工厂模式</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">function HairFactory()&#123;&#125;;</div><div class="line">HairFactory.prototype=&#123;</div><div class="line">	constructor:HairFactory,</div><div class="line">	getHair:function(type)&#123;</div><div class="line">		if(type==&apos;left&apos;)&#123;</div><div class="line">			return new LeftHair();</div><div class="line">		&#125;else if(type=&apos;right&apos;)&#123;</div><div class="line">			return new RightHair();</div><div class="line">		&#125;else&#123;</div><div class="line">			return null;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;;</div><div class="line">function LeftHair()&#123;</div><div class="line">	this.draw=function()&#123;</div><div class="line">		console.log(&quot;LeftHair&quot;);	//左偏分发型</div><div class="line">	&#125;;</div><div class="line">&#125;</div><div class="line">function RightHair()&#123;</div><div class="line">	this.draw=function()&#123;</div><div class="line">		console.log(&quot;RightHair&quot;);	//右偏分发型</div><div class="line">	&#125;;</div><div class="line">&#125;</div><div class="line">var hair=new HairFactory();</div><div class="line">var left=hair.getHair(&apos;left&apos;);</div><div class="line">left.draw();</div></pre></td></tr></table></figure>
+<h3 id="抽象工厂模式类"><a href="#抽象工厂模式类" class="headerlink" title="抽象工厂模式类"></a>抽象工厂模式类</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">//未完待续</div><div class="line">function Boy()&#123;</div><div class="line">&#125;;</div><div class="line">Boy.prototype=&#123;</div><div class="line">	constructor:Boy,</div><div class="line">	getBoy:function(type)&#123;</div><div class="line">		if(type==&quot;MCBoy&quot;)&#123;</div><div class="line">			return new MCBoy();</div><div class="line">		&#125;else if(type==&quot;HNBoy&quot;)&#123;</div><div class="line">			return new HNBoy();</div><div class="line">		&#125;</div><div class="line">	&#125;,</div><div class="line">	drawBoy:function(type)&#123;</div><div class="line">		</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">function Girl()&#123;</div><div class="line">&#125;;</div><div class="line">Girl.prototype=&#123;</div><div class="line">	constructor:Girl,</div><div class="line">	drawGirl:function(type)&#123;&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">function BicycleShop(name)&#123;</div><div class="line">	this.name=name;</div><div class="line">	this.info=function()&#123;</div><div class="line">		console.log(&quot;i am &quot;+this.name+&quot; shop&quot;);</div><div class="line">	&#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line">BicycleShop.prototype=&#123;</div><div class="line">	constructor:BicycleShop,</div><div class="line">	sellBicycle:function(type)&#123;</div><div class="line">		var bicycle=this.createBicycle(type);</div><div class="line">		bicycle.getPrice();</div><div class="line">		bicycle.getMaker();</div><div class="line">		return bicycle;</div><div class="line">	&#125;,</div><div class="line">	createBicycle:function(type)&#123;</div><div class="line">		</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">//寄生组合式继承</div><div class="line">function inheritPrototype(sub,sup)&#123;</div><div class="line">	var prototype=Object</div><div class="line">	sub.prototype.constructor=sub;	//增强对象</div><div class="line">	</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+      
 
-        <div class="article-info info-on-right">
-          
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -176,103 +181,104 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/07/28/工厂模式/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/28/单例模式/" class="archive-article-date">
-  	<time datetime="2017-07-28T01:46:21.006Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-28</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2017/07/28/单例模式/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">单例模式</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/28/单例模式/">单例模式</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/28/策略模式/" class="archive-article-date">
-  	<time datetime="2017-07-28T01:46:21.001Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/28/策略模式/">策略模式</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -295,8 +301,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

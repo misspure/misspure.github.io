@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Hathaway`s Blog</title>
+  <title>单例模式 | Hathaway`s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hathaway`s Blog">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="单例模式：即保证一个类仅有一个实例，并提供一个访问它的全局访问点种类：标准单例模式、透明的单例模式、用代理实现单例模式、惰性单例">
+<meta name="keywords" content="javascript,设计模式">
+<meta property="og:type" content="article">
+<meta property="og:title" content="单例模式">
+<meta property="og:url" content="http://yoursite.com/2017/07/28/单例模式/index.html">
 <meta property="og:site_name" content="Hathaway`s Blog">
+<meta property="og:description" content="单例模式：即保证一个类仅有一个实例，并提供一个访问它的全局访问点种类：标准单例模式、透明的单例模式、用代理实现单例模式、惰性单例">
+<meta property="og:updated_time" content="2017-08-02T08:01:57.637Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hathaway`s Blog">
+<meta name="twitter:title" content="单例模式">
+<meta name="twitter:description" content="单例模式：即保证一个类仅有一个实例，并提供一个访问它的全局访问点种类：标准单例模式、透明的单例模式、用代理实现单例模式、惰性单例">
   
     <link rel="alternative" href="/atom.xml" title="Hathaway`s Blog" type="application/atom+xml">
   
@@ -131,78 +136,50 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-单例模式" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/28/工厂模式/" class="archive-article-date">
-  	<time datetime="2017-07-28T01:46:21.011Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-28</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/28/工厂模式/">工厂模式</a>
+    <h1 class="article-title" itemprop="name">
+      单例模式
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/28/单例模式/" class="archive-article-date">
+        
+        <a href="/2017/07/28/单例模式/" class="archive-article-date">
   	<time datetime="2017-07-28T01:46:21.006Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-28</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/28/单例模式/">单例模式</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>单例模式：即保证一个类仅有一个实例，并提供一个访问它的全局访问点<br>种类：标准单例模式、透明的单例模式、用代理实现单例模式、惰性单例</p>
+</blockquote>
+<a id="more"></a>
+<h3 id="标准单例模式"><a href="#标准单例模式" class="headerlink" title="标准单例模式"></a>标准单例模式</h3><blockquote>
+<p>不足：类的不透明性，类的使用者必须知道这是一个单例类，不然会直接new Xxx();</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line">//方式一</div><div class="line">var Singleton=function(name)&#123;</div><div class="line">    this.name=name;</div><div class="line">    this.instance=null;</div><div class="line">&#125;;</div><div class="line">Singleton.prototype.getName=function()&#123;</div><div class="line">    console.log(this.name);</div><div class="line">&#125;;</div><div class="line">Singleton.getInstance=function(name)&#123;</div><div class="line">    if(!this.instance)&#123; //判断有无实例，没有则创建</div><div class="line">        this.instance=new Singleton(name);</div><div class="line">    &#125;</div><div class="line">    return this.instance;</div><div class="line">&#125;;</div><div class="line">var a=Singleton.getInstance(&apos;name1&apos;);	//调用不用new Xxx()</div><div class="line">var b=Singleton.getInstance(&apos;name2&apos;);</div><div class="line">console.log(a===b);	//true</div><div class="line"></div><div class="line">//方式二</div><div class="line">var Singleton=function(name)&#123;</div><div class="line">    this.name=name;</div><div class="line">&#125;;</div><div class="line">Singleton.prototype.getName=function()&#123;</div><div class="line">    console.log(this.name);</div><div class="line">&#125;;</div><div class="line">Singleton.getInstance=(function(name)&#123;</div><div class="line">    var instance=null;</div><div class="line">    return function (name) &#123;</div><div class="line">        if(!this.instance)&#123; //判断有无实例，没有则创建</div><div class="line">            this.instance=new Singleton(name);</div><div class="line">        &#125;</div><div class="line">        return this.instance;</div><div class="line">    &#125;</div><div class="line">&#125;)();</div><div class="line">var a=Singleton.getInstance(&apos;name1&apos;);</div><div class="line">var b=Singleton.getInstance(&apos;name2&apos;);</div><div class="line">console.log(a===b);	//true</div></pre></td></tr></table></figure>
+<h3 id="透明的单例模式"><a href="#透明的单例模式" class="headerlink" title="透明的单例模式"></a>透明的单例模式</h3><blockquote>
+<p>优点：用户可以像使用其他普通的类一样创建对象<br><br>不足：匿名函数封装后，CreateDiv构造函数职责一：创建对象和初始化；职责二：保证只有一个对象。根据“单一职责原则”，这种做法不妥，而且使构造函数看起来很奇怪有莫有！</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">var CreateDiv=(function () &#123;</div><div class="line">    var instance;</div><div class="line">    var CreateDiv=function (html) &#123;</div><div class="line">        if (instance)&#123;</div><div class="line">            return instance;</div><div class="line">        &#125;</div><div class="line">        this.html=html;</div><div class="line">        this.init();	//初始化</div><div class="line">        return instance=this;</div><div class="line">    &#125;;</div><div class="line">    CreateDiv.prototype.init=function () &#123;</div><div class="line">        var div=document.createElement(&apos;div&apos;);</div><div class="line">        div.innerHTML=this.html;</div><div class="line">        document.body.appendChild(div);</div><div class="line">    &#125;;</div><div class="line">    return CreateDiv;</div><div class="line">&#125;)();</div><div class="line">var a=new CreateDiv(&apos;name1&apos;);	//跟普通类一样实例化</div><div class="line">var b=new CreateDiv(&apos;name2&apos;);</div><div class="line">console.log(a===b);	//true</div></pre></td></tr></table></figure>
+<h3 id="用代理实现单例模式"><a href="#用代理实现单例模式" class="headerlink" title="用代理实现单例模式"></a>用代理实现单例模式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">//普通类，方便复用</div><div class="line">var CreateDiv=function (html) &#123;</div><div class="line">    this.html=html;</div><div class="line">    this.init();</div><div class="line">&#125;;</div><div class="line">CreateDiv.prototype.init=function () &#123;</div><div class="line">    var div=document.createElement(&apos;div&apos;);</div><div class="line">    div.innerHTML=this.html;</div><div class="line">    document.body.appendChild(div);</div><div class="line">&#125;;</div><div class="line">//抽出负责管理单例逻辑</div><div class="line">var ProxySingletonCreateDiv=(function () &#123;</div><div class="line">    var instance;</div><div class="line">    return function (html) &#123;</div><div class="line">        if (!instance)&#123;</div><div class="line">            instance=new CreateDiv(html);</div><div class="line">        &#125;</div><div class="line">        return instance;</div><div class="line">    &#125;</div><div class="line">&#125;)();</div><div class="line">var a=new ProxySingletonCreateDiv(&apos;name1&apos;);</div><div class="line">var b=new ProxySingletonCreateDiv(&apos;name2&apos;);</div><div class="line">var c= ProxySingletonCreateDiv(&apos;name3&apos;);	//直接调用也是一样，返回同个实例	</div><div class="line">console.log(a===b);	//true</div><div class="line">console.log(a===c);	//true</div></pre></td></tr></table></figure>
+<h3 id="惰性单例"><a href="#惰性单例" class="headerlink" title="惰性单例"></a>惰性单例</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">//初级惰性：没有对比就没有伤害！此例拿来与下面优化后对比</div><div class="line">//不足：初始化和单例逻辑耦合，不遵循“职责单一原则”，即不忠！</div><div class="line">var createLoginLayer=(function () &#123;</div><div class="line">    var div;</div><div class="line">    return function () &#123;</div><div class="line">        if(!div) &#123;</div><div class="line">            div = document.createElement(&apos;div&apos;);</div><div class="line">            div.innerHTML = &apos;I am login layer&apos;;</div><div class="line">            div.style.display = &apos;none&apos;;</div><div class="line">            document.body.appendChild(div);</div><div class="line">        &#125;</div><div class="line">        return div;</div><div class="line">    &#125;</div><div class="line">&#125;)();</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">//只负责单例逻辑</div><div class="line">var getSingle=function (fn) &#123;</div><div class="line">    var result;</div><div class="line">    return function () &#123;</div><div class="line">        return result||(result=fn.apply(this,arguments));</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line">//只负责创建，且只创建一次，第二次后由于已存在实例，所以不再调用</div><div class="line">var createDiv=function (content) &#123;</div><div class="line">    var div = document.createElement(&apos;div&apos;);</div><div class="line">    div.innerHTML = content;</div><div class="line">    div.style.display = &apos;none&apos;;</div><div class="line">    document.body.appendChild(div);</div><div class="line">    return div;	//必须返回，否则下次检测不到实例的存在</div><div class="line">&#125;;</div><div class="line">var createIframe=function()&#123;</div><div class="line">	var iframe=document.createElement(&quot;iframe&quot;);</div><div class="line">	document.body.appendChild(iframe);</div><div class="line">	return iframe;</div><div class="line">&#125;</div><div class="line">//创建登录弹框</div><div class="line">var createSingleLoginLayer=getSingle(createDiv);</div><div class="line">document.getElementById(&apos;login&apos;).onclick=function () &#123;</div><div class="line">    var loginLayer=createSingleLoginLayer(&quot;我是登录框&quot;);</div><div class="line">    loginLayer.style.display=&apos;block&apos;;</div><div class="line">&#125;</div><div class="line">//创建一个框架</div><div class="line">var createSingleIframe=getSingle(createIframe);</div><div class="line">document.getElementById(&apos;iframe&apos;).onclick=function()&#123;</div><div class="line">	var iframe=createSingleIframe();</div><div class="line">	iframe.src=&quot;http://baidu.com&quot;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">//为列表绑定事件，只需在第一次渲染列表的时候绑定，再绑是浪费时间精力！</div><div class="line">//方式一、借助jquery实现</div><div class="line">var bindEvent=function()&#123;</div><div class="line">	$(&apos;div&apos;).one(&apos;click&apos;,function()&#123;</div><div class="line">		console.log(&apos;click&apos;);</div><div class="line">	&#125;)</div><div class="line">&#125;;</div><div class="line">var render=function()&#123;</div><div class="line">	console.log(&apos;开始渲染列表&apos;);</div><div class="line">	bindEvent();</div><div class="line">&#125;;</div><div class="line">render();</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">//方式二、用getSingle函数实现</div><div class="line">var bindEvent=getSingle(function()&#123;</div><div class="line">	document.getElementById(&apos;div&apos;).onclick=function()&#123;</div><div class="line">		console.log(&apos;just one time&apos;);</div><div class="line">		return true;	//没对象没元素还是要return哦</div><div class="line">	&#125;</div><div class="line">&#125;)</div><div class="line">var render=function()&#123;</div><div class="line">	console.log(&apos;开始渲染列表&apos;);</div><div class="line">	bindEvent();</div><div class="line">&#125;;</div><div class="line">render();</div></pre></td></tr></table></figure>
+      
 
-        <div class="article-info info-on-right">
-          
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -218,61 +195,113 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/07/28/单例模式/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/28/策略模式/" class="archive-article-date">
-  	<time datetime="2017-07-28T01:46:21.001Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-28</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2017/07/28/工厂模式/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          工厂模式
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/07/28/策略模式/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">策略模式</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/28/策略模式/">策略模式</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -295,8 +324,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
